@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import { db } from "@/lib/db";
 import { auth, redirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
@@ -24,7 +25,7 @@ const DashboardLayout = async ({
   if (!store || store.error) return redirect("/");
   return (
     <div>
-      <div>Navigation bar</div>
+      <Navbar />
       {children}
     </div>
   );
