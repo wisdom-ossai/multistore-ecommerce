@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import ModalProvider from "@/providers/modal-provider";
+import { Toaster } from "@/components/ui/Toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <ModalProvider />
           {children}
+          <Toaster position="top-right" />
         </body>
       </html>
     </ClerkProvider>
