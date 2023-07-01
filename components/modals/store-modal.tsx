@@ -16,7 +16,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
 const formSchema = z.object({
-  name: z.string({ required_error: "Please enter a store name" }).min(1),
+  name: z.string({ required_error: "Please enter a store name" }).min(3),
 });
 
 const StoreModal = () => {
